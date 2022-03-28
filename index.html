@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>  
+    <link rel="stylesheet" href="main.css">
+    <title>電卓</title>
+  </head>
+
+  <body>
+    <h3>電卓</h3>
+
+    <table>
+      <form name="calculator">
+        <tr>
+          <td>
+            <input class="display" type="text" name="result" value="0">
+          </td>
+        </tr>
+        <tr>
+          <td><input class="other" type="button" value="AC" onclick="allClear()"></td>
+          <td><input class="other" type="button" value="C" onclick="tmpClear()"></td>
+          <td><div id="process" class="other way"><span>state</span></div></td>
+          <td><input class="operator" type="button" value="/" onclick="calculate('/')"></td>
+        </tr>
+        <tr>
+          <td><input class="operand" type="button" value="7" onclick="pickNum('7')"></td>
+          <td><input class="operand" type="button" value="8" onclick="pickNum('8')"></td>
+          <td><input class="operand" type="button" value="9" onclick="pickNum('9')"></td>
+          <td><input class="operator" type="button" value="*" onclick="calculate('*')"></td>
+        </tr>
+        <tr>
+          <td><input class="operand" type="button" value="4" onclick="pickNum('4')"></td>
+          <td><input class="operand" type="button" value="5" onclick="pickNum('5')"></td>
+          <td><input class="operand" type="button" value="6" onclick="pickNum('6')"></td>
+          <td><input class="operator" type="button" value="-" onclick="calculate('-')"></td>
+        </tr>
+        <tr>
+          <td><input class="operand" type="button" value="1" onclick="pickNum('1')"></td>
+          <td><input class="operand" type="button" value="2" onclick="pickNum('2')"></td>
+          <td><input class="operand" type="button" value="3" onclick="pickNum('3')"></td>
+          <td><input class="operator" type="button" value="+" onclick="calculate('+')"></td>
+        </tr>
+        <tr>
+          <td><input class="operand"type="button" value="0" onclick="pickNum('0')"></td>
+          <td><input class="operand"type="button" value="00" onclick="pickNum('00')"></td>
+          <td><input class="operand" type="button" value="." onclick="pickDotto('.')"></td>
+          <td><input class="operator" type="button" value="=" onclick="calculate('=')"></td>
+        </tr>
+      </form>
+    </table>
+
+    <script src="main.js"></script>
+  </body>
+</html>
